@@ -60,20 +60,32 @@
             }
         }
 
+        function CheckColor(int){
+            if (int < 0){
+                document.getElementById("answer").style.color = "red";
+            } else{
+                document.getElementById("answer").style.color = "black";
+            }
+        }
+
         function clickMultiply(){
             var answer = GetInput(1) * GetInput(2);
+            CheckColor(answer);
             document.getElementById("answer").innerText = answer;
         }
         function clickDivide(){
             var answer = GetInput(1) / GetInput(2);
+            CheckColor(answer);
             document.getElementById("answer").innerText = answer;
         }
         function clickAdd(){
             var answer = GetInput(1) + GetInput(2);
+            CheckColor(answer);
             document.getElementById("answer").innerText = answer;
         }
         function clickMinus(){
             var answer = GetInput(1) - GetInput(2);
+            CheckColor(answer);
             document.getElementById("answer").innerText = answer;
         }
 
