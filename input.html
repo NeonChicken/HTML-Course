@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            body{
+                font-family: Verdana, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Multiply two numbers</h1>
+        <input type="text" id="input1" value="7">
+        <input type="text" id="input2" value="8">
+        <button onclick="clickMultiply()">
+            Multiply
+        </button>
+        <button onclick="clickDivide()">
+            Divide
+        </button>
+        <button onclick="clickAdd()">
+            Add
+        </button>
+        <button onclick="clickMinus()">
+            Minus
+        </button>
+        <div id="answer">
+            0
+        </div>
+
+        <br><br><br>
+
+        <h2>Generate a random number up to:</h2>
+        <input type="text" id="inputRnd" value="10">
+        <button onclick="clickRandom()">
+            Generate
+        </button>
+        <div id="rndAnswer">
+            0
+        </div>
+
+        <br><br><br>
+    </body>
+
+    <script>
+        // int = (inputfield) 1 / 2
+        function GetInput(int){
+            var input1 = parseInt(document.getElementById("input1").value);
+            var input2 = parseInt(document.getElementById("input2").value);
+            if (int == 1){
+                return input1;
+            } 
+            else if (int == 2){
+                return input2;
+            }
+        }
+
+        function clickMultiply(){
+            var answer = GetInput(1) * GetInput(2);
+            document.getElementById("answer").innerText = answer;
+        }
+        function clickDivide(){
+            var answer = GetInput(1) / GetInput(2);
+            document.getElementById("answer").innerText = answer;
+        }
+        function clickAdd(){
+            var answer = GetInput(1) + GetInput(2);
+            document.getElementById("answer").innerText = answer;
+        }
+        function clickMinus(){
+            var answer = GetInput(1) - GetInput(2);
+            document.getElementById("answer").innerText = answer;
+        }
+
+        function clickRandom(){
+            var inputRnd = parseInt(document.getElementById("inputRnd").value);
+            var rndNumber = Math.round(Math.random() * inputRnd);
+            document.getElementById("rndAnswer").innerText = rndNumber;
+        }
+    </script>
+</html>

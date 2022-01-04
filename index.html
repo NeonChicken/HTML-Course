@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            body{
+                font-family: Verdana, sans-serif;
+            }
+            p{
+                font-size: 20px;
+            }
+            h1{
+                font-size: 45px;
+            }
+            img{
+                border: 3px dashed;
+                width: 20%;
+            }
+            table{
+                background-color: lightblue;
+                border: 3px solid;
+                width: 30%;
+                text-align: center;
+            }
+            
+            .typo{
+                text-decoration-line: underline; 
+                text-decoration-style: wavy; 
+                text-decoration-color: red;
+            }
+
+            #tableHeader{
+                font-family: 'Arial Narrow Bold', sans-serif;
+                background-color: skyblue;
+            }
+            #tableFooter{
+                font-style: italic;
+            }
+
+            h1:hover{
+                color: tomato;
+            }
+
+            a:visited{
+                color:slateblue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Hello World</h1>
+        
+        <p class="typo">Lorem ipsum dolor sit...</p>
+
+        <span>Span1</span>
+        <span>Span2</span>
+
+        <br><br>
+
+        <img src="https://www.schoolplaten.com/afbeelding-eendje-dm20021.jpg" alt="Rubber Ducky">
+        
+        <br><br>
+
+        <table>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+            <tr>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table>
+            <thead>
+                <tr id="tableHeader">
+                    <th>Header</th>
+                    <th>Header</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr id="tableFooter">
+                    <td>Footer</td>
+                    <td>Footer</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br>
+
+        <div>
+            <div>
+                Block 1
+            </div>
+            <div id="divBlock2">
+                Block 2
+            </div>
+        </div>
+
+        <br>
+
+        <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
+
+        <br><br>
+
+        <input type="text" id="input" value="1">
+    </body>
+
+    <script>
+        var block2Text = document.getElementById("divBlock2").innerText;
+        document.getElementById("divBlock2").innerText = block2Text + " - JavaScript"
+
+        console.log("rnd = " + randomNumberUpTo(10));
+
+        function randomNumberUpTo(int){
+            return Math.round(Math.random() * int);
+        }
+
+        var defaultInputValue = document.getElementById("input").value;
+
+        function inputAlert(){
+            return "input field = " + defaultInputValue;
+        }
+
+        console.log(inputAlert());
+    </script>
+</html>
